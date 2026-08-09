@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Achievements | Ilakkia Dharun</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background-color: #0f172a;
+        }
+
+        .navbar-brand {
+            background-color: #6f42c1;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .navbar-nav {
+            gap: 15px;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: #8b5cf6 !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #8b5cf6 !important;
+        }
+
+
+        /* ================= BODY ================= */
+
+        body {
+            background-color: #f8f9fa;
+            color: #0f172a;
+        }
+
+
+        /* ================= ACHIEVEMENT SECTION ================= */
+
+        .achievement-section {
+
+            min-height: 100vh;
+
+            padding: 90px 0;
+
+            background: linear-gradient(
+                135deg,
+                #f8f9fa,
+                #eee8ff
+            );
+
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .section-subtitle {
+
+            color: #6f42c1;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .section-title {
+
+            font-size: 55px;
+
+            font-weight: 800;
+
+        }
+
+
+        .section-title span {
+
+            color: #6f42c1;
+
+        }
+
+
+        .section-description {
+
+            color: #6c757d;
+
+            font-size: 18px;
+
+            max-width: 700px;
+
+        }
+
+
+        /* ================= ACHIEVEMENT CARD ================= */
+
+        .achievement-card {
+
+            background-color: white;
+
+            border: none;
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            height: 100%;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .achievement-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 40px rgba(111, 66, 193, 0.20);
+
+        }
+
+
+        /* ================= TOP LINE ================= */
+
+        .achievement-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 5px;
+
+            background-color: #6f42c1;
+
+        }
+
+
+        /* ================= ICON ================= */
+
+        .achievement-icon {
+
+            width: 70px;
+
+            height: 70px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            border-radius: 18px;
+
+            font-size: 32px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .achievement-title {
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        /* ================= CATEGORY ================= */
+
+        .achievement-category {
+
+            color: #6f42c1;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* ================= DESCRIPTION ================= */
+
+        .achievement-description {
+
+            color: #6c757d;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* ================= BADGES ================= */
+
+        .achievement-badge {
+
+            display: inline-block;
+
+            background-color: #f1effa;
+
+            color: #6f42c1;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            margin: 3px;
+
+        }
+
+
+        /* ================= NUMBER ================= */
+
+        .achievement-number {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 25px;
+
+            font-size: 35px;
+
+            font-weight: 800;
+
+            color: #eee8ff;
+
+        }
+
+
+        /* ================= HIGHLIGHT BOX ================= */
+
+        .highlight-box {
+
+            background-color: #0f172a;
+
+            color: white;
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+            margin-top: 60px;
+
+        }
+
+
+        .highlight-icon {
+
+            font-size: 45px;
+
+            color: #a78bfa;
+
+        }
+
+
+        .highlight-title {
+
+            font-size: 28px;
+
+            font-weight: 700;
+
+        }
+
+
+        .highlight-text {
+
+            color: #cbd5e1;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            .section-title {
+
+                font-size: 42px;
+
+            }
+
+            .achievement-card {
+
+                padding: 25px;
+
+            }
+
+            .highlight-box {
+
+                padding: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================= -->
+    <!-- NAVBAR -->
+    <!-- ================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="./portfolio.html">
+
+                Pf
+
+            </a>
+
+
+            <!-- Mobile Menu -->
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+
+                    <!-- Home -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- About -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Skills -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_skills.html">
+
+                            Skills
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Projects -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_projects.html">
+
+                            Projects
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Experience -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_experience.html">
+
+                            Experience
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Education -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_education.html">
+
+                            Education
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Certificates -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_certificates.html">
+
+                            Certificates
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Achievements -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="./portfolio_achievements.html">
+
+                            Achievements
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Contact -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_contact.html">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================================================= -->
+    <!-- ACHIEVEMENTS SECTION -->
+    <!-- ================================================= -->
+
+    <section class="achievement-section">
+
+
+        <div class="container">
+
+
+            <!-- ================= TITLE ================= -->
+
+            <div class="text-center mb-5">
+
+
+                <p class="section-subtitle mb-2">
+
+                    WHAT I'VE ACHIEVED
+
+                </p>
+
+
+                <h1 class="section-title">
+
+                    My <span>Achievements</span>
+
+                </h1>
+
+
+                <p class="section-description mx-auto mt-3">
+
+                    A collection of academic, technical,
+                    leadership and extracurricular achievements
+                    from my learning journey.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- ACHIEVEMENT CARDS -->
+            <!-- ================================================= -->
+
+            <div class="row g-4">
+
+
+
+                <!-- ================================================= -->
+                <!-- ACHIEVEMENT 1 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="achievement-card">
+
+
+                        <span class="achievement-number">
+
+                            TN17JDA351311
+
+                        </span>
+
+
+                        <div class="achievement-icon">
+
+                            <i class="bi bi-star-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="achievement-title">
+
+                            NCC Sergeant
+
+                        </h2>
+
+
+                        <p class="achievement-category">
+
+                            Leadership & Discipline
+
+                        </p>
+
+
+                        <p class="achievement-description">
+
+                            Served as a Sergeant in NCC and
+                            developed leadership, discipline,
+                            teamwork and responsibility through
+                            various activities and training.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="achievement-badge">
+
+                                Leadership
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                Teamwork
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                Discipline
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- ACHIEVEMENT 2 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="achievement-card">
+
+
+                        <span class="achievement-number">
+
+                            02
+
+                        </span>
+
+
+                        <div class="achievement-icon">
+
+                            <i class="bi bi-calendar-check-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="achievement-title">
+
+                            100% Attendance
+
+                        </h2>
+
+
+                        <p class="achievement-category">
+
+                            Academic Achievement
+
+                        </p>
+
+
+                        <p class="achievement-description">
+
+                            Achieved 100% attendance during my
+                            academic journey, demonstrating
+                            consistency, commitment and
+                            responsibility.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="achievement-badge">
+
+                                Commitment
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                Consistency
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                Responsibility
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- ACHIEVEMENT 3 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="achievement-card">
+
+
+                        <span class="achievement-number">
+
+                            03
+
+                        </span>
+
+
+                        <div class="achievement-icon">
+
+                            <i class="bi bi-code-square"></i>
+
+                        </div>
+
+
+                        <h2 class="achievement-title">
+
+                            Technical Projects
+
+                        </h2>
+
+
+                        <p class="achievement-category">
+
+                            Software Development
+
+                        </p>
+
+
+                        <p class="achievement-description">
+
+                            Developed practical software and web
+                            development projects using Python,
+                            Flask, SQL, JavaScript and Bootstrap.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="achievement-badge">
+
+                                Python
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                Flask
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                SQL
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                Bootstrap
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- ACHIEVEMENT 4 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="achievement-card">
+
+
+                        <span class="achievement-number">
+
+                            04
+
+                        </span>
+
+
+                        <div class="achievement-icon">
+
+                            <i class="bi bi-eye-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="achievement-title">
+
+                            Drowsiness Detection System
+
+                        </h2>
+
+
+                        <p class="achievement-category">
+
+                            Major Project
+
+                        </p>
+
+
+                        <p class="achievement-description">
+
+                            Developed a real-time driver drowsiness
+                            detection system using computer vision
+                            and hardware integration.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="achievement-badge">
+
+                                Python
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                OpenCV
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                Dlib
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                Arduino
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- ACHIEVEMENT 5 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="achievement-card">
+
+
+                        <span class="achievement-number">
+
+                            05
+
+                        </span>
+
+
+                        <div class="achievement-icon">
+
+                            <i class="bi bi-briefcase-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="achievement-title">
+
+                            Internship Experience
+
+                        </h2>
+
+
+                        <p class="achievement-category">
+
+                            Professional Development
+
+                        </p>
+
+
+                        <p class="achievement-description">
+
+                            Gained practical exposure through web
+                            development internships and worked
+                            with frontend and backend technologies.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="achievement-badge">
+
+                                Web Development
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                HTML
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                CSS
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                JavaScript
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- ACHIEVEMENT 6 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="achievement-card">
+
+
+                        <span class="achievement-number">
+
+                            06
+
+                        </span>
+
+
+                        <div class="achievement-icon">
+
+                            <i class="bi bi-book-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="achievement-title">
+
+                            Continuous Learning
+
+                        </h2>
+
+
+                        <p class="achievement-category">
+
+                            Technical Growth
+
+                        </p>
+
+
+                        <p class="achievement-description">
+
+                            Continuously improving programming,
+                            database, web development and
+                            problem-solving skills through
+                            hands-on learning.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="achievement-badge">
+
+                                Python
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                SQL
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                JavaScript
+
+                            </span>
+
+
+                            <span class="achievement-badge">
+
+                                DSA
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- FEATURED ACHIEVEMENT -->
+            <!-- ================================================= -->
+
+            <div class="highlight-box">
+
+
+                <div class="row align-items-center">
+
+
+                    <div class="col-md-2 text-center mb-3 mb-md-0">
+
+
+                        <i class="bi bi-trophy-fill highlight-icon"></i>
+
+
+                    </div>
+
+
+                    <div class="col-md-10">
+
+
+                        <h2 class="highlight-title">
+
+                            Turning Learning Into Practice
+
+                        </h2>
+
+
+                        <p class="highlight-text mb-0">
+
+                            My biggest achievement is applying the
+                            concepts I learn to practical projects.
+                            From Python programming and SQL to
+                            web development and computer vision,
+                            I continuously focus on building
+                            real-world applications and improving
+                            my technical skills.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <p class="mb-0">
+
+            © 2026 Ilakkia Dharun.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certificates | Ilakkia Dharun</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background-color: #0f172a;
+        }
+
+        .navbar-brand {
+            background-color: #6f42c1;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .navbar-nav {
+            gap: 15px;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: #8b5cf6 !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #8b5cf6 !important;
+        }
+
+
+        /* ================= BODY ================= */
+
+        body {
+            background-color: #f8f9fa;
+            color: #0f172a;
+        }
+
+
+        /* ================= CERTIFICATE SECTION ================= */
+
+        .certificate-section {
+            min-height: 100vh;
+
+            padding: 90px 0;
+
+            background: linear-gradient(
+                135deg,
+                #f8f9fa,
+                #eee8ff
+            );
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .section-subtitle {
+            color: #6f42c1;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title {
+            font-size: 55px;
+
+            font-weight: 800;
+        }
+
+
+        .section-title span {
+            color: #6f42c1;
+        }
+
+
+        .section-description {
+            color: #6c757d;
+
+            font-size: 18px;
+
+            max-width: 700px;
+        }
+
+
+        /* ================= CERTIFICATE CARD ================= */
+
+        .certificate-card {
+            background-color: white;
+
+            border: none;
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            height: 100%;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .certificate-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 40px rgba(111, 66, 193, 0.20);
+        }
+
+
+        /* ================= TOP LINE ================= */
+
+        .certificate-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 5px;
+
+            background-color: #6f42c1;
+        }
+
+
+        /* ================= CERTIFICATE ICON ================= */
+
+        .certificate-icon {
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            border-radius: 18px;
+
+            font-size: 32px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================= CERTIFICATE TITLE ================= */
+
+        .certificate-title {
+            font-size: 24px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* ================= ISSUER ================= */
+
+        .certificate-issuer {
+            color: #6f42c1;
+
+            font-size: 17px;
+
+            font-weight: 600;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* ================= DATE ================= */
+
+        .certificate-date {
+            display: inline-block;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            padding: 6px 14px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* ================= DESCRIPTION ================= */
+
+        .certificate-description {
+            color: #6c757d;
+
+            line-height: 1.7;
+
+            min-height: 80px;
+        }
+
+
+        /* ================= SKILL BADGES ================= */
+
+        .skill-badge {
+            display: inline-block;
+
+            background-color: #f1effa;
+
+            color: #6f42c1;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            margin: 3px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .certificate-btn {
+            background-color: #6f42c1;
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 10px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            display: inline-block;
+
+            transition: 0.3s;
+        }
+
+
+        .certificate-btn:hover {
+            background-color: #59359a;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= CERTIFICATE NUMBER ================= */
+
+        .certificate-number {
+            position: absolute;
+
+            top: 20px;
+
+            right: 25px;
+
+            font-size: 35px;
+
+            font-weight: 800;
+
+            color: #eee8ff;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .certificate-card {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================= -->
+    <!-- NAVBAR -->
+    <!-- ================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="./portfolio.html">
+
+                Pf
+
+            </a>
+
+
+            <!-- Mobile Menu -->
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+
+                    <!-- Home -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- About -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Skills -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_skills.html">
+
+                            Skills
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Projects -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_projects.html">
+
+                            Projects
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Experience -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_experience.html">
+
+                            Experience
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Education -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_education.html">
+
+                            Education
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Certificates -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="./portfolio_certificates.html">
+
+                            Certificates
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Achievements -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_achievements.html">
+
+                            Achievements
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Contact -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_contact.html">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================================================= -->
+    <!-- CERTIFICATES SECTION -->
+    <!-- ================================================= -->
+
+    <section class="certificate-section">
+
+
+        <div class="container">
+
+
+            <!-- ================= TITLE ================= -->
+
+            <div class="text-center mb-5">
+
+
+                <p class="section-subtitle mb-2">
+
+                    MY ACHIEVEMENTS
+
+                </p>
+
+
+                <h1 class="section-title">
+
+                    My <span>Certificates</span>
+
+                </h1>
+
+
+                <p class="section-description mx-auto mt-3">
+
+                    Certifications and courses that demonstrate
+                    my technical knowledge and continuous learning.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- CERTIFICATE CARDS -->
+            <!-- ================================================= -->
+
+            <div class="row g-4">
+
+
+
+                <!-- ================================================= -->
+                <!-- CERTIFICATE 1 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="certificate-card">
+
+
+                        <span class="certificate-number">
+
+                            -
+
+                        </span>
+
+
+                        <div class="certificate-icon">
+
+                            <i class="bi bi-file-earmark-code-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="certificate-title">
+
+                            Python Full Stack Development
+
+                        </h2>
+
+
+                        <p class="certificate-issuer">
+
+                            Issued by: QSpiders
+
+                        </p>
+
+
+                        <span class="certificate-date">
+
+                            2026
+
+                        </span>
+
+
+                        <p class="certificate-description">
+
+                            Gained practical knowledge of Python, Oracle SQL, HTML, CSS, JavaScript, Django, and React through Full Stack Development training at QSpiders. Developed skills in frontend, backend, and database technologies.
+
+                        </p>
+
+
+                        <div class="mb-4">
+
+
+                            <span class="skill-badge">
+                                Python
+                            </span>
+
+
+                            <span class="skill-badge">
+                                HTML
+                            </span>
+
+                            <span class="skill-badge">
+                                CSS
+                            </span>
+
+                            <span class="skill-badge">
+                                Javascript
+                            </span>
+
+                            <span class="skill-badge">
+                                Oracle SQL
+                            </span>
+
+                            <span class="skill-badge">
+                                react
+                            </span>
+                            <span class="skill-badge">
+                                Django
+                            </span>
+
+
+                        </div>
+
+
+                        <!-- Replace PDF name -->
+
+                        <a href="./python_certificate.pdf"
+                           class="certificate-btn"
+                           target="_blank">
+
+                            <i class="bi bi-eye"></i>
+
+                            View Certificate
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- CERTIFICATE 2 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="certificate-card">
+
+
+                        <span class="certificate-number">
+
+                            4759692
+
+                        </span>
+
+
+                        <div class="certificate-icon">
+
+                            <i class="bi bi-globe2"></i>
+
+                        </div>
+
+
+                        <h2 class="certificate-title">
+
+                            Web Development
+
+                        </h2>
+
+
+                        <p class="certificate-issuer">
+
+                            Issued by: CodSoft
+
+                        </p>
+
+
+                        <span class="certificate-date">
+
+                            2025
+
+                        </span>
+
+
+                        <p class="certificate-description">
+
+                            Certificate covering web development
+                            fundamentals including frontend
+                            technologies and responsive design.
+
+                        </p>
+
+
+                        <div class="mb-4">
+
+
+                            <span class="skill-badge">
+                                HTML
+                            </span>
+
+
+                            <span class="skill-badge">
+                                CSS
+                            </span>
+
+
+                            <span class="skill-badge">
+                                JavaScript
+                            </span>
+
+
+                        </div>
+
+
+                        <a href="./certificate_codsoft.jpeg"
+                           class="certificate-btn"
+                           target="_blank">
+
+                            <i class="bi bi-eye"></i>
+
+                            View Certificate
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- CERTIFICATE 3 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="certificate-card">
+
+
+                        <span class="certificate-number">
+
+                            -
+
+                        </span>
+
+
+                        <div class="certificate-icon">
+
+                            <i class="bi bi-database-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="certificate-title">
+
+                            SQL / Database
+
+                        </h2>
+
+
+                        <p class="certificate-issuer">
+
+                            Issued by: YOUR ORGANIZATION
+
+                        </p>
+
+
+                        <span class="certificate-date">
+
+                            2026
+
+                        </span>
+
+
+                        <p class="certificate-description">
+
+                            Certificate demonstrating knowledge of
+                            SQL queries, relational databases and
+                            database management concepts.
+
+                        </p>
+
+
+                        <div class="mb-4">
+
+
+                            <span class="skill-badge">
+                                SQL
+                            </span>
+
+
+                            <span class="skill-badge">
+                                MySQL
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Database
+                            </span>
+
+
+                        </div>
+
+
+                        <a href="./sql_certificate.pdf"
+                           class="certificate-btn"
+                           target="_blank">
+
+                            <i class="bi bi-eye"></i>
+
+                            View Certificate
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- CERTIFICATE 4 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="certificate-card">
+
+
+                        <span class="certificate-number">
+
+                            animate:name={params}
+
+                        </span>
+
+
+                        <div class="certificate-icon">
+
+                            <i class="bi bi-briefcase-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="certificate-title">
+
+                            Full Stack Development Internship
+
+                        </h2>
+
+
+                        <p class="certificate-issuer">
+
+                            Issued by: Netgene Technologies
+
+                        </p>
+
+
+                        <span class="certificate-date">
+
+                            2025
+
+                        </span>
+
+
+                        <p class="certificate-description">
+
+                            Internship certificate demonstrating
+                            practical exposure to web development
+                            and real-world project work.
+
+                        </p>
+
+
+                        <div class="mb-4">
+
+
+                            <span class="skill-badge">
+                                HTML
+                            </span>
+
+
+                            <span class="skill-badge">
+                                CSS
+                            </span>
+
+
+                            <span class="skill-badge">
+                                JavaScript
+                            </span>
+
+
+                        </div>
+
+
+                        <a href="./certificate_netgene.jpeg"
+                           class="certificate-btn"
+                           target="_blank">
+
+                            <i class="bi bi-eye"></i>
+
+                            View Certificate
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- CERTIFICATE 5 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="certificate-card">
+
+
+                        <span class="certificate-number">
+
+                            05
+
+                        </span>
+
+
+                        <div class="certificate-icon">
+
+                            <i class="bi bi-robot"></i>
+
+                        </div>
+
+
+                        <h2 class="certificate-title">
+
+                            AI / Machine Learning
+
+                        </h2>
+
+
+                        <p class="certificate-issuer">
+
+                            Issued by: YOUR ORGANIZATION
+
+                        </p>
+
+
+                        <span class="certificate-date">
+
+                            2026
+
+                        </span>
+
+
+                        <p class="certificate-description">
+
+                            Certificate related to artificial
+                            intelligence, machine learning or
+                            computer vision concepts.
+
+                        </p>
+
+
+                        <div class="mb-4">
+
+
+                            <span class="skill-badge">
+                                Python
+                            </span>
+
+
+                            <span class="skill-badge">
+                                AI
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Computer Vision
+                            </span>
+
+
+                        </div>
+
+
+                        <a href="./ai_certificate.pdf"
+                           class="certificate-btn"
+                           target="_blank">
+
+                            <i class="bi bi-eye"></i>
+
+                            View Certificate
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- CERTIFICATE 6 -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="certificate-card">
+
+
+                        <span class="certificate-number">
+
+                            06
+
+                        </span>
+
+
+                        <div class="certificate-icon">
+
+                            <i class="bi bi-award-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="certificate-title">
+
+                            Other Certification
+
+                        </h2>
+
+
+                        <p class="certificate-issuer">
+
+                            Issued by: YOUR ORGANIZATION
+
+                        </p>
+
+
+                        <span class="certificate-date">
+
+                            2026
+
+                        </span>
+
+
+                        <p class="certificate-description">
+
+                            Add another relevant certification,
+                            workshop, technical course or
+                            achievement here.
+
+                        </p>
+
+
+                        <div class="mb-4">
+
+
+                            <span class="skill-badge">
+                                Technical
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Learning
+                            </span>
+
+
+                        </div>
+
+
+                        <a href="./certificate_6.pdf"
+                           class="certificate-btn"
+                           target="_blank">
+
+                            <i class="bi bi-eye"></i>
+
+                            View Certificate
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <p class="mb-0">
+
+            © 2026 Ilakkia Dharun.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

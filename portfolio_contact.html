@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Ilakkia Dharun</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background-color: #0f172a;
+        }
+
+        .navbar-brand {
+            background-color: #6f42c1;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .navbar-nav {
+            gap: 15px;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: #8b5cf6 !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #8b5cf6 !important;
+        }
+
+
+        /* ================= BODY ================= */
+
+        body {
+            background-color: #f8f9fa;
+            color: #0f172a;
+        }
+
+
+        /* ================= CONTACT SECTION ================= */
+
+        .contact-section {
+
+            min-height: 100vh;
+
+            padding: 90px 0;
+
+            background: linear-gradient(
+                135deg,
+                #f8f9fa,
+                #eee8ff
+            );
+
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .section-subtitle {
+
+            color: #6f42c1;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .section-title {
+
+            font-size: 55px;
+
+            font-weight: 800;
+
+        }
+
+
+        .section-title span {
+
+            color: #6f42c1;
+
+        }
+
+
+        .section-description {
+
+            color: #6c757d;
+
+            font-size: 18px;
+
+            max-width: 700px;
+
+        }
+
+
+        /* ================= CONTACT INFORMATION ================= */
+
+        .contact-info {
+
+            background-color: white;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            height: 100%;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+        }
+
+
+        .contact-info-title {
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .contact-info-description {
+
+            color: #6c757d;
+
+            line-height: 1.7;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        /* ================= CONTACT ITEM ================= */
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 15px;
+
+            margin-bottom: 15px;
+
+            background-color: #f8f9fa;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .contact-item:hover {
+
+            transform: translateX(5px);
+
+            background-color: #eee8ff;
+
+        }
+
+
+        .contact-icon {
+
+            width: 50px;
+
+            height: 50px;
+
+            min-width: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            border-radius: 12px;
+
+            font-size: 22px;
+
+        }
+
+
+        .contact-label {
+
+            color: #6c757d;
+
+            font-size: 13px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .contact-value {
+
+            color: #0f172a;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            word-break: break-word;
+
+        }
+
+
+        .contact-value:hover {
+
+            color: #6f42c1;
+
+        }
+
+
+        /* ================= SOCIAL ICONS ================= */
+
+        .social-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            border-radius: 50%;
+
+            font-size: 20px;
+
+            margin-right: 8px;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+        }
+
+
+        .social-icon:hover {
+
+            background-color: #6f42c1;
+
+            color: white;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* ================= CONTACT FORM ================= */
+
+        .contact-form {
+
+            background-color: white;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+        }
+
+
+        .form-title {
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .form-label {
+
+            font-weight: 600;
+
+            color: #0f172a;
+
+        }
+
+
+        .form-control {
+
+            border: 1px solid #dee2e6;
+
+            border-radius: 12px;
+
+            padding: 13px 15px;
+
+        }
+
+
+        .form-control:focus {
+
+            border-color: #6f42c1;
+
+            box-shadow:
+                0 0 0 0.2rem rgba(111, 66, 193, 0.15);
+
+        }
+
+
+        textarea.form-control {
+
+            min-height: 150px;
+
+            resize: vertical;
+
+        }
+
+
+        /* ================= SEND BUTTON ================= */
+
+        .send-btn {
+
+            background-color: #6f42c1;
+
+            color: white;
+
+            border: none;
+
+            padding: 12px 30px;
+
+            border-radius: 10px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .send-btn:hover {
+
+            background-color: #59359a;
+
+            color: white;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* ================= RESUME BOX ================= */
+
+        .resume-box {
+
+            margin-top: 25px;
+
+            padding: 25px;
+
+            background-color: #0f172a;
+
+            color: white;
+
+            border-radius: 18px;
+
+        }
+
+
+        .resume-box h4 {
+
+            font-weight: 700;
+
+        }
+
+
+        .resume-box p {
+
+            color: #cbd5e1;
+
+        }
+
+
+        .resume-btn {
+
+            background-color: #6f42c1;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 10px 20px;
+
+            border-radius: 10px;
+
+            display: inline-block;
+
+            font-weight: 600;
+
+        }
+
+
+        .resume-btn:hover {
+
+            background-color: #8b5cf6;
+
+            color: white;
+
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            .section-title {
+
+                font-size: 42px;
+
+            }
+
+            .contact-info,
+            .contact-form {
+
+                padding: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================= -->
+    <!-- NAVBAR -->
+    <!-- ================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="./portfolio.html">
+
+                Pf
+
+            </a>
+
+
+            <!-- Mobile Menu -->
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+
+                    <!-- Home -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- About -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Skills -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_skills.html">
+
+                            Skills
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Projects -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_projects.html">
+
+                            Projects
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Experience -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_experience.html">
+
+                            Experience
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Education -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_education.html">
+
+                            Education
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Certificates -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href=".//portfolio_certificates.html">
+
+                            Certificates
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Achievements -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_achievements.html">
+
+                            Achievements
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Contact -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="./portfolio_contact.html">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================================================= -->
+    <!-- CONTACT SECTION -->
+    <!-- ================================================= -->
+
+    <section class="contact-section">
+
+
+        <div class="container">
+
+
+            <!-- ================= TITLE ================= -->
+
+            <div class="text-center mb-5">
+
+
+                <p class="section-subtitle mb-2">
+
+                    GET IN TOUCH
+
+                </p>
+
+
+                <h1 class="section-title">
+
+                    Contact <span>Me</span>
+
+                </h1>
+
+
+                <p class="section-description mx-auto mt-3">
+
+                    I'm open to opportunities, collaborations,
+                    internships and software development roles.
+                    Feel free to get in touch with me.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- CONTACT CONTENT -->
+            <!-- ================================================= -->
+
+            <div class="row g-4">
+
+
+
+                <!-- ================================================= -->
+                <!-- LEFT SIDE -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-5">
+
+
+                    <div class="contact-info">
+
+
+                        <h2 class="contact-info-title">
+
+                            Let's Connect
+
+                        </h2>
+
+
+                        <p class="contact-info-description">
+
+                            Whether you have an opportunity,
+                            project idea or simply want to connect,
+                            you can reach me through the details
+                            below.
+
+                        </p>
+
+
+
+                        <!-- ================= EMAIL ================= -->
+
+                        <div class="contact-item">
+
+
+                            <div class="contact-icon">
+
+                                <i class="bi bi-envelope-fill"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+
+                                    Email
+
+                                </div>
+
+
+                                <a href="mailto:ilakkiadharun07@gmail.com"
+                                   class="contact-value">
+
+                                    ilakkiadharun07@gmail.com
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= PHONE ================= -->
+
+                        <div class="contact-item">
+
+
+                            <div class="contact-icon">
+
+                                <i class="bi bi-telephone-fill"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+
+                                    Phone
+
+                                </div>
+
+
+                                <a href="tel:+91XXXXXXXXXX"
+                                   class="contact-value">
+
+                                    +91 9342595218
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= LOCATION ================= -->
+
+                        <div class="contact-item">
+
+
+                            <div class="contact-icon">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+
+                                    Location
+
+                                </div>
+
+
+                                <span class="contact-value">
+
+                                    Bengaluru , India
+
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= LINKEDIN ================= -->
+
+                        <div class="contact-item">
+
+
+                            <div class="contact-icon">
+
+                                <i class="bi bi-linkedin"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+
+                                    LinkedIn
+
+                                </div>
+
+
+                                <a href="https://www.linkedin.com/in/ilakkia-dharun-a-678851372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                   target="_blank"
+                                   class="contact-value">
+
+                                    LinkedIn Profile
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= GITHUB ================= -->
+
+                        <div class="contact-item">
+
+
+                            <div class="contact-icon">
+
+                                <i class="bi bi-github"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="contact-label">
+
+                                    GitHub
+
+                                </div>
+
+
+                                <a href="https://github.com/ilakkiadharun07-svg"
+                                   target="_blank"
+                                   class="contact-value">
+
+                                    GitHub Profile
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= SOCIAL ================= -->
+
+                        <div class="mt-4">
+
+
+                            <h6 class="fw-bold mb-3">
+
+                                Follow / Connect
+
+                            </h6>
+
+
+                            <a href="https://github.com/ilakkiadharun07-svg"
+                               target="_blank"
+                               class="social-icon">
+
+                                <i class="bi bi-github"></i>
+
+                            </a>
+
+
+                            <a href="https://www.linkedin.com/in/ilakkia-dharun-a-678851372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                               target="_blank"
+                               class="social-icon">
+
+                                <i class="bi bi-linkedin"></i>
+
+                            </a>
+
+
+                            <a href="mailto:ilakkiadharun07@gmail.com"
+                               class="social-icon">
+
+                                <i class="bi bi-envelope-fill"></i>
+
+                            </a>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- RIGHT SIDE - FORM -->
+                <!-- ================================================= -->
+
+                <div class="col-lg-7">
+
+
+                    <div class="contact-form">
+
+
+                        <h2 class="form-title">
+
+                            Send Me a Message
+
+                        </h2>
+
+
+                        <!-- Contact Form -->
+
+                        <form action="mailto:ilakkiadharun07@gmail.com"
+                              method="post"
+                              enctype="text/plain">
+
+
+                            <!-- Name -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Your Name
+
+                                </label>
+
+
+                                <input type="text"
+                                       class="form-control"
+                                       name="name"
+                                       placeholder="Enter your name"
+                                       required>
+
+                            </div>
+
+
+
+                            <!-- Email -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Your Email
+
+                                </label>
+
+
+                                <input type="email"
+                                       class="form-control"
+                                       name="email"
+                                       placeholder="Enter your email"
+                                       required>
+
+                            </div>
+
+
+
+                            <!-- Subject -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Subject
+
+                                </label>
+
+
+                                <input type="text"
+                                       class="form-control"
+                                       name="subject"
+                                       placeholder="Enter subject"
+                                       required>
+
+                            </div>
+
+
+
+                            <!-- Message -->
+
+                            <div class="mb-4">
+
+                                <label class="form-label">
+
+                                    Message
+
+                                </label>
+
+
+                                <textarea class="form-control"
+                                          name="message"
+                                          placeholder="Write your message here..."
+                                          required></textarea>
+
+                            </div>
+
+
+
+                            <!-- Button -->
+
+                            <button type="submit"
+                                    class="send-btn">
+
+                                <i class="bi bi-send-fill me-2"></i>
+
+                                Send Message
+
+                            </button>
+
+
+                        </form>
+
+
+
+                        <!-- ================= RESUME ================= -->
+
+                        <div class="resume-box mt-4">
+
+
+                            <div class="row align-items-center">
+
+
+                                <div class="col-md-8">
+
+
+                                    <h4>
+
+                                        Want to know more about me?
+
+                                    </h4>
+
+
+                                    <p class="mb-md-0">
+
+                                        Download my resume to view my
+                                        education, skills, projects and
+                                        experience.
+
+                                    </p>
+
+
+                                </div>
+
+
+                                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+
+
+                                    <a href="./ILAKKIA DHARUN A_Python_Developer.pdf"
+                                       class="resume-btn"
+                                       download>
+
+                                        <i class="bi bi-download me-2"></i>
+
+                                        Resume
+
+                                    </a>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <p class="mb-0">
+
+            © 2026 Ilakkia Dharun.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

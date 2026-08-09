@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ilakkia Dharun | Python Developer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        /* Navbar */
+        .navbar {
+            background-color: #0f172a;
+        }
+
+        .navbar-brand {
+            background-color: #6f42c1;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .navbar-nav {
+            gap: 15px;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: #8b5cf6 !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #8b5cf6 !important;
+        }
+
+
+        /* Hero Section */
+        .hero {
+            min-height: calc(100vh - 70px);
+            background: linear-gradient(135deg, #f8f9fa, #eee8ff);
+        }
+
+        .name {
+            font-size: 65px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .role {
+            color: #6f42c1;
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .description {
+            font-size: 20px;
+            color: #6c757d;
+            max-width: 650px;
+        }
+
+        /* Profile image */
+        .profile-img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid #ffffff;
+            box-shadow: 0 10px 40px rgba(111, 66, 193, 0.3);
+        }
+
+        /* Social icons */
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            color: #6f42c1;
+            font-size: 20px;
+            margin-right: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background-color: #6f42c1;
+            color: white;
+        }
+
+        /* Open to work badge */
+        .open-work {
+            display: inline-block;
+            background-color: #d1e7dd;
+            color: #198754;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .name {
+                font-size: 45px;
+            }
+
+            .role {
+                font-size: 28px;
+            }
+
+            .description {
+                font-size: 17px;
+            }
+
+            .profile-img {
+                width: 280px;
+                height: 280px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                Pf
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./portfolio.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio_about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio_skills.html">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio_projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio_experience.html">
+                            Experience
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio_education.html">
+                            Education
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio_certificates.html">
+                            Certificates
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Achievements
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero d-flex align-items-center">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+
+                <!-- LEFT SIDE -->
+
+                <div class="col-lg-7">
+
+                    <!-- Open to work -->
+
+                    <span class="open-work mb-4">
+                        🟢 Open to Work
+                    </span>
+
+
+                    <p class="fs-3 mt-4 mb-2">
+                        Hello, I'm 👋
+                    </p>
+
+
+                    <!-- Name -->
+
+                    <h1 class="name mb-3">
+                        ILAKKIA DHARUN A
+                    </h1>
+
+
+                    <!-- Role -->
+
+                    <h2 class="role mb-4">
+                        Python Developer
+                        <span class="text-dark">|</span>
+                        Frontend Developer
+                    </h2>
+
+
+                    <!-- Description -->
+
+                    <p class="description mb-4">
+
+                        I build responsive and user-friendly web
+                        applications using Python, Flask,
+                        Bootstrap, JavaScript and SQL.
+
+                    </p>
+
+
+                    <!-- Buttons -->
+
+                    <div class="d-flex gap-3 flex-wrap mb-4">
+
+                        <a href="./ILAKKIA DHARUN A_Python_Developer.pdf"
+                           class="btn btn-primary btn-lg"
+                           download>
+
+                            <i class="bi bi-download"></i>
+                            Download Resume
+
+                        </a>
+
+
+                        <a href="./DRIVER DROWSINESS DETECTION AND VEHICLE CONTROL SYSTEM USING PYTHON, ARUDINO AND L298N MOTOR DRIVER.pdf"
+                           class="btn btn-outline-primary btn-lg">
+
+                            <i class="bi bi-folder"></i>
+                            View Projects
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Social links -->
+
+                    <div class="mt-3">
+
+                        <span class="me-3 fs-5">
+                            Connect with me
+                        </span>
+
+
+                        <a href="https://github.com/ilakkiadharun07-svg"
+                           class="social-icon">
+
+                            <i class="bi bi-github"></i>
+
+                        </a>
+
+
+                        <a href="https://www.linkedin.com/in/ilakkia-dharun-a-678851372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                           class="social-icon">
+
+                            <i class="bi bi-linkedin"></i>
+
+                        </a>
+
+
+                        <a href="mailto:ilakkiadharun07@gmail.com"
+                           class="social-icon">
+
+                            <i class="bi bi-envelope"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
+
+                    <!-- Replace profile.jpg with your photo -->
+
+                    <img src="./profile_photo_1.png"
+                         alt="Ilakkia Dharun"
+                         class="profile-img">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Education | Ilakkia Dharun</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background-color: #0f172a;
+        }
+
+        .navbar-brand {
+            background-color: #6f42c1;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .navbar-nav {
+            gap: 15px;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: #8b5cf6 !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #8b5cf6 !important;
+        }
+
+
+        /* ================= BODY ================= */
+
+        body {
+            background-color: #f8f9fa;
+            color: #0f172a;
+        }
+
+
+        /* ================= EDUCATION SECTION ================= */
+
+        .education-section {
+            min-height: 100vh;
+
+            padding: 90px 0;
+
+            background: linear-gradient(
+                135deg,
+                #f8f9fa,
+                #eee8ff
+            );
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .section-subtitle {
+            color: #6f42c1;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title {
+            font-size: 55px;
+
+            font-weight: 800;
+        }
+
+
+        .section-title span {
+            color: #6f42c1;
+        }
+
+
+        .section-description {
+            color: #6c757d;
+
+            font-size: 18px;
+
+            max-width: 700px;
+        }
+
+
+        /* ================= EDUCATION CARD ================= */
+
+        .education-card {
+            background-color: white;
+
+            border: none;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            height: 100%;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .education-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(111, 66, 193, 0.18);
+        }
+
+
+        /* ================= ICON ================= */
+
+        .education-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            border-radius: 18px;
+
+            font-size: 30px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================= DEGREE ================= */
+
+        .degree-title {
+            font-size: 26px;
+
+            font-weight: 700;
+        }
+
+
+        .institution {
+            color: #6f42c1;
+
+            font-size: 19px;
+
+            font-weight: 600;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* ================= DATE ================= */
+
+        .education-date {
+            display: inline-block;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            padding: 7px 15px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* ================= EDUCATION DETAILS ================= */
+
+        .education-details {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin: 20px 0;
+        }
+
+
+        .detail-box {
+            background-color: #f8f9fa;
+
+            border-radius: 15px;
+
+            padding: 15px 20px;
+
+            min-width: 150px;
+        }
+
+
+        .detail-title {
+            color: #6c757d;
+
+            font-size: 14px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .detail-value {
+            color: #6f42c1;
+
+            font-size: 22px;
+
+            font-weight: 700;
+        }
+
+
+        /* ================= DESCRIPTION ================= */
+
+        .education-description {
+            color: #6c757d;
+
+            line-height: 1.7;
+
+            font-size: 16px;
+        }
+
+
+        /* ================= HIGHLIGHTS ================= */
+
+        .highlight-title {
+            font-size: 17px;
+
+            font-weight: 700;
+        }
+
+
+        .highlight-list {
+            padding-left: 20px;
+
+            color: #6c757d;
+        }
+
+
+        .highlight-list li {
+            margin-bottom: 8px;
+        }
+
+
+        /* ================= SCHOOL CARD ================= */
+
+        .school-card {
+            background-color: white;
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            height: 100%;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .school-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(111, 66, 193, 0.18);
+        }
+
+
+        .school-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            border-radius: 16px;
+
+            font-size: 28px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* ================= BADGES ================= */
+
+        .skill-badge {
+            display: inline-block;
+
+            background-color: #f1effa;
+
+            color: #6f42c1;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin: 3px;
+        }
+
+
+        /* ================= LEARNING CARD ================= */
+
+        .learning-card {
+            background-color: white;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .education-card,
+            .school-card,
+            .learning-card {
+                padding: 25px;
+            }
+
+            .education-details {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================= -->
+    <!-- NAVBAR -->
+    <!-- ================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="./portfolio.html">
+
+                Pf
+
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+
+                    <!-- Home -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- About -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Skills -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_skills.html">
+
+                            Skills
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Projects -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_projects.html">
+
+                            Projects
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Experience -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_experience.html">
+
+                            Experience
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Education -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="./portfolio_education.html">
+
+                            Education
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Certificates -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_certificates.html">
+
+                            Certificates
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Achievements -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="portfolio_achievements.html">
+
+                            Achievements
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Contact -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="portfolio_contact.html">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================================================= -->
+    <!-- EDUCATION SECTION -->
+    <!-- ================================================= -->
+
+    <section class="education-section">
+
+
+        <div class="container">
+
+
+            <!-- ================= TITLE ================= -->
+
+            <div class="text-center mb-5">
+
+
+                <p class="section-subtitle mb-2">
+
+                    MY ACADEMIC JOURNEY
+
+                </p>
+
+
+                <h1 class="section-title">
+
+                    Education & <span>Learning</span>
+
+                </h1>
+
+
+                <p class="section-description mx-auto mt-3">
+
+                    My academic background, qualifications and
+                    technical learning journey.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- COLLEGE / DEGREE -->
+            <!-- ================================================= -->
+
+            <div class="row justify-content-center">
+
+
+                <div class="col-lg-9">
+
+
+                    <div class="education-card">
+
+
+                        <div class="education-icon">
+
+                            <i class="bi bi-mortarboard-fill"></i>
+
+                        </div>
+
+
+                        <span class="education-date">
+
+                            2022 - 2026
+
+                        </span>
+
+
+                        <h2 class="degree-title">
+
+                            B.Tech – Information Technology
+
+                        </h2>
+
+
+                        <p class="institution">
+
+                            Loyola Institute of Technology 
+
+                        </p>
+
+
+                        <p class="education-description">
+
+                            Completed my bachelor's degree with
+                            a strong interest in software development,
+                            programming, web technologies and
+                            database management.
+
+                        </p>
+
+
+
+                        <!-- ================= CGPA ================= -->
+
+                        <div class="education-details">
+
+
+                            <div class="detail-box">
+
+                                <div class="detail-title">
+
+                                    CGPA
+
+                                </div>
+
+                                <div class="detail-value">
+
+                                    9.2 / 10
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-box">
+
+                                <div class="detail-title">
+
+                                    Degree Status
+
+                                </div>
+
+                                <div class="detail-value">
+
+                                    Completed
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= HIGHLIGHTS ================= -->
+
+                        <h5 class="highlight-title mt-4 mb-3">
+
+                            Academic Highlights
+
+                        </h5>
+
+
+                        <ul class="highlight-list">
+
+                            <li>
+                                Developed academic and personal
+                                software projects.
+                            </li>
+
+                            <li>
+                                Gained practical knowledge of Python,
+                                web development and SQL.
+                            </li>
+
+                            <li>
+                                Developed a driver drowsiness
+                                detection project.
+                            </li>
+
+                            <li>
+                                Strengthened programming and
+                                problem-solving skills.
+                            </li>
+
+                        </ul>
+
+
+
+                        <!-- ================= TECHNOLOGIES ================= -->
+
+                        <div class="mt-4">
+
+
+                            <span class="skill-badge">
+                                Python
+                            </span>
+
+
+                            <span class="skill-badge">
+                                SQL
+                            </span>
+
+
+                            <span class="skill-badge">
+                                HTML
+                            </span>
+
+
+                            <span class="skill-badge">
+                                CSS
+                            </span>
+
+
+                            <span class="skill-badge">
+                                JavaScript
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Flask
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- SCHOOL EDUCATION -->
+            <!-- ================================================= -->
+
+            <div class="row g-4 mt-4">
+
+
+                <!-- ================= 12TH ================= -->
+
+                <div class="col-lg-6">
+
+
+                    <div class="school-card">
+
+
+                        <div class="school-icon">
+
+                            <i class="bi bi-building"></i>
+
+                        </div>
+
+
+                        <span class="education-date">
+
+                            Higher Secondary
+
+                        </span>
+
+
+                        <h2 class="degree-title">
+
+                            12th Standard
+
+                        </h2>
+
+
+                        <p class="institution">
+
+                            St.Arulanandar.Hr.Sec.School. Oriyur
+
+                        </p>
+
+
+                        <p class="education-description">
+
+                            Completed Higher Secondary Education
+                            with a strong academic foundation.
+
+                        </p>
+
+
+
+                        <!-- Percentage -->
+
+                        <div class="education-details">
+
+
+                            <div class="detail-box">
+
+                                <div class="detail-title">
+
+                                    Percentage
+
+                                </div>
+
+                                <div class="detail-value">
+
+                                    83.8%
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-box">
+
+                                <div class="detail-title">
+
+                                    Year
+
+                                </div>
+
+                                <div class="detail-value">
+
+                                    2022
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= 10TH ================= -->
+
+                <div class="col-lg-6">
+
+
+                    <div class="school-card">
+
+
+                        <div class="school-icon">
+
+                            <i class="bi bi-book"></i>
+
+                        </div>
+
+
+                        <span class="education-date">
+
+                            Secondary Education
+
+                        </span>
+
+
+                        <h2 class="degree-title">
+
+                            10th Standard
+
+                        </h2>
+
+
+                        <p class="institution">
+
+                            St.Arulanandar.Hr.Sec.School. Oriyur
+
+                        </p>
+
+
+                        <p class="education-description">
+
+                            Completed Secondary Education and
+                            developed a strong foundation in
+                            mathematics, science and academics.
+
+                        </p>
+
+
+
+                        <!-- Percentage -->
+
+                        <div class="education-details">
+
+
+                            <div class="detail-box">
+
+                                <div class="detail-title">
+
+                                    Percentage
+
+                                </div>
+
+                                <div class="detail-value">
+
+                                    92%
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="detail-box">
+
+                                <div class="detail-title">
+
+                                    Year
+
+                                </div>
+
+                                <div class="detail-value">
+
+                                    2020
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- CONTINUOUS LEARNING -->
+            <!-- ================================================= -->
+
+            <div class="row justify-content-center mt-5">
+
+
+                <div class="col-lg-9">
+
+
+                    <div class="learning-card text-center">
+
+
+                        <div class="school-icon mx-auto">
+
+                            <i class="bi bi-lightbulb-fill"></i>
+
+                        </div>
+
+
+                        <h2 class="degree-title">
+
+                            Continuous Learning
+
+                        </h2>
+
+
+                        <p class="education-description">
+
+                            Along with my formal education, I continue
+                            to improve my technical skills through
+                            practical projects, programming practice,
+                            internships and self-learning.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="skill-badge">
+                                Python
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Flask
+                            </span>
+
+
+                            <span class="skill-badge">
+                                SQL
+                            </span>
+
+
+                            <span class="skill-badge">
+                                JavaScript
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Bootstrap
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Data Structures
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <p class="mb-0">
+
+            © 2026 Ilakkia Dharun.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

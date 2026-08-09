@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experience | Ilakkia Dharun</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background-color: #0f172a;
+        }
+
+        .navbar-brand {
+            background-color: #6f42c1;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .navbar-nav {
+            gap: 15px;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: #8b5cf6 !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #8b5cf6 !important;
+        }
+
+
+        /* ================= BODY ================= */
+
+        body {
+            background-color: #f8f9fa;
+            color: #0f172a;
+        }
+
+
+        /* ================= EXPERIENCE SECTION ================= */
+
+        .experience-section {
+            min-height: 100vh;
+            padding: 90px 0;
+
+            background: linear-gradient(
+                135deg,
+                #f8f9fa,
+                #eee8ff
+            );
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .section-subtitle {
+            color: #6f42c1;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+
+        .section-title {
+            font-size: 55px;
+            font-weight: 800;
+        }
+
+
+        .section-title span {
+            color: #6f42c1;
+        }
+
+
+        .section-description {
+            color: #6c757d;
+            font-size: 18px;
+            max-width: 700px;
+        }
+
+
+        /* ================= TIMELINE ================= */
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 0;
+            bottom: 0;
+
+            width: 3px;
+
+            background-color: #6f42c1;
+
+            transform: translateX(-50%);
+        }
+
+
+        /* ================= EXPERIENCE ITEM ================= */
+
+        .experience-item {
+            position: relative;
+
+            width: 50%;
+
+            padding: 20px 40px;
+
+            box-sizing: border-box;
+        }
+
+
+        .experience-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+
+        .experience-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+
+        /* ================= TIMELINE DOT ================= */
+
+        .timeline-dot {
+            position: absolute;
+
+            width: 20px;
+            height: 20px;
+
+            background-color: #6f42c1;
+
+            border: 4px solid white;
+
+            border-radius: 50%;
+
+            top: 35px;
+
+            box-shadow: 0 0 0 3px #6f42c1;
+
+            z-index: 2;
+        }
+
+
+        .experience-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+
+
+        .experience-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+
+
+        /* ================= EXPERIENCE CARD ================= */
+
+        .experience-card {
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+
+            text-align: left;
+        }
+
+
+        .experience-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 35px rgba(111, 66, 193, 0.18);
+        }
+
+
+        /* ================= ICON ================= */
+
+        .experience-icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            border-radius: 15px;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* ================= ROLE ================= */
+
+        .experience-role {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+
+        .company-name {
+            color: #6f42c1;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+
+        .experience-date {
+            display: inline-block;
+
+            background-color: #eee8ff;
+
+            color: #6f42c1;
+
+            padding: 6px 14px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin: 10px 0 15px;
+        }
+
+
+        .experience-description {
+            color: #6c757d;
+
+            line-height: 1.7;
+        }
+
+
+        /* ================= SKILL BADGES ================= */
+
+        .skill-badge {
+            display: inline-block;
+
+            background-color: #f1effa;
+
+            color: #6f42c1;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin: 3px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .section-title {
+                font-size: 42px;
+            }
+
+
+            .timeline::before {
+                left: 15px;
+            }
+
+
+            .experience-item,
+            .experience-item:nth-child(even),
+            .experience-item:nth-child(odd) {
+
+                width: 100%;
+
+                left: 0;
+
+                text-align: left;
+
+                padding-left: 50px;
+                padding-right: 10px;
+            }
+
+
+            .experience-item:nth-child(odd) .timeline-dot,
+            .experience-item:nth-child(even) .timeline-dot {
+
+                left: 5px;
+                right: auto;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================= -->
+    <!-- NAVBAR -->
+    <!-- ================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="./portfolio.html">
+
+                Pf
+
+            </a>
+
+
+            <!-- Mobile Menu -->
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+
+                    <!-- Home -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- About -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Skills -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_skills.html">
+
+                            Skills
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Projects -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_projects.html">
+
+                            Projects
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Experience -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="./portfolio_experience.html">
+
+                            Experience
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Education -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_education.html">
+
+                            Education
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Certificates -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_certificates.html">
+
+                            Certificates
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Achievements -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_achievements.html">
+
+                            Achievements
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Contact -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="./portfolio_contact.html">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================================================= -->
+    <!-- EXPERIENCE SECTION -->
+    <!-- ================================================= -->
+
+    <section class="experience-section">
+
+
+        <div class="container">
+
+
+            <!-- ================= TITLE ================= -->
+
+            <div class="text-center mb-5">
+
+
+                <p class="section-subtitle mb-2">
+
+                    MY JOURNEY
+
+                </p>
+
+
+                <h1 class="section-title">
+
+                    Experience & <span>Internships</span>
+
+                </h1>
+
+
+                <p class="section-description mx-auto mt-3">
+
+                    My practical learning experience through
+                    internships, training and hands-on projects.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- TIMELINE -->
+            <!-- ================================================= -->
+
+            <div class="timeline">
+
+
+                <!-- ================================================= -->
+                <!-- EXPERIENCE 1 -->
+                <!-- ================================================= -->
+
+                <div class="experience-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="experience-card">
+
+
+                        <div class="experience-icon">
+
+                            <i class="bi bi-code-slash"></i>
+
+                        </div>
+
+
+                        <h2 class="experience-role">
+
+                            Full Stack Development Intern
+
+                        </h2>
+
+
+                        <p class="company-name">
+
+                            Netgene
+
+                        </p>
+
+
+                        <span class="experience-date">
+
+                            Internship
+
+                        </span>
+
+
+                        <p class="experience-description">
+
+                            Worked on web development concepts
+                            including frontend development,
+                            backend fundamentals and database
+                            integration.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="skill-badge">
+                                HTML
+                            </span>
+
+
+                            <span class="skill-badge">
+                                CSS
+                            </span>
+
+
+                            <span class="skill-badge">
+                                JavaScript
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Web Development
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- EXPERIENCE 2 -->
+                <!-- ================================================= -->
+
+                <div class="experience-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="experience-card">
+
+
+                        <div class="experience-icon">
+
+                            <i class="bi bi-globe2"></i>
+
+                        </div>
+
+
+                        <h2 class="experience-role">
+
+                            Web Development Intern
+
+                        </h2>
+
+
+                        <p class="company-name">
+
+                            CodSoft
+
+                        </p>
+
+
+                        <span class="experience-date">
+
+                            Internship
+
+                        </span>
+
+
+                        <p class="experience-description">
+
+                            Developed frontend web pages and
+                            practiced responsive web design using
+                            HTML, CSS and JavaScript.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="skill-badge">
+                                HTML
+                            </span>
+
+
+                            <span class="skill-badge">
+                                CSS
+                            </span>
+
+
+                            <span class="skill-badge">
+                                JavaScript
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Responsive Design
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- EXPERIENCE 3 -->
+                <!-- ================================================= -->
+
+                <div class="experience-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="experience-card">
+
+
+                        <div class="experience-icon">
+
+                            <i class="bi bi-laptop"></i>
+
+                        </div>
+
+
+                        <h2 class="experience-role">
+
+                            Python & Web Development
+
+                        </h2>
+
+
+                        <p class="company-name">
+
+                            Personal Development
+
+                        </p>
+
+
+                        <span class="experience-date">
+
+                            Ongoing Learning
+
+                        </span>
+
+
+                        <p class="experience-description">
+
+                            Building practical applications using
+                            Python, Flask, MySQL, JavaScript and
+                            Bootstrap while strengthening
+                            programming and problem-solving skills.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="skill-badge">
+                                Python
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Flask
+                            </span>
+
+
+                            <span class="skill-badge">
+                                MySQL
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Bootstrap
+                            </span>
+
+
+                            <span class="skill-badge">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- EXPERIENCE 4 -->
+                <!-- ================================================= -->
+
+                <div class="experience-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="experience-card">
+
+
+                        <div class="experience-icon">
+
+                            <i class="bi bi-robot"></i>
+
+                        </div>
+
+
+                        <h2 class="experience-role">
+
+                            Drowsiness Detection Project
+
+                        </h2>
+
+
+                        <p class="company-name">
+
+                            Academic Project
+
+                        </p>
+
+
+                        <span class="experience-date">
+
+                            Major Project
+
+                        </span>
+
+
+                        <p class="experience-description">
+
+                            Developed a real-time driver drowsiness
+                            detection system using computer vision.
+                            The project integrates Python, OpenCV,
+                            Dlib and Arduino-based vehicle control.
+
+                        </p>
+
+
+                        <div class="mt-3">
+
+
+                            <span class="skill-badge">
+                                Python
+                            </span>
+
+
+                            <span class="skill-badge">
+                                OpenCV
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Dlib
+                            </span>
+
+
+                            <span class="skill-badge">
+                                Arduino
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <p class="mb-0">
+
+            © 2026 Ilakkia Dharun.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>
